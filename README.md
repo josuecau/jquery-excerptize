@@ -20,7 +20,7 @@ leo tortor.
 <script>
 $(document).ready(function(){
 
-  // default 
+  	// default 
 	$('.excerptize').excerptize();
 	
 	// with custom options
