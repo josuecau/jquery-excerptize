@@ -34,3 +34,9 @@ $(document).ready(function(){
 	
 });
 ````
+
+## Changelog
+
+### 0.1
+
+* Initial release
