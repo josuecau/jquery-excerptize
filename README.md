@@ -1,5 +1,5 @@
 # jQuery Excerptize
-Simple plugin for turning longer text in excerpts.
+Simple plugin for turning longer text into excerpts.
 
 ##What does it do?
 This plugin will take a full text passage, create an excerpt, and add **view more/view less** links.  It's a simple alternative to server based excerpt creation (i.e, WordPress' **the_excerpt()**) so that the full excerpt can be indexed by search engines and provide the desired user experience at the same time.
