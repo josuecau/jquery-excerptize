@@ -30,16 +30,16 @@ $(document).ready(function(){
 	  tags:'div',
 	  showMoreText:'show more',
 	  showLessText:'show less',
-	  beforeShowMoreCallback: function(excepritzedObj) {
+	  beforeShowMoreCallback: function(excerptizedObj) {
 	  	// do something before text is expanded
 	  },
-	  afterShowMoreCallback: function(excepritzedObj) {
+	  afterShowMoreCallback: function(excerptizedObj) {
 	  	// do something after text is expanded
 	  }
-	  beforeShowLessCallback: function(excepritzedObj) {
+	  beforeShowLessCallback: function(excerptizedObj) {
 	  	// do something before text is contracted
 	  },
-	  afterShowLessCallback: function(excepritzedObj) {
+	  afterShowLessCallback: function(excerptizedObj) {
 	  	// do something after text is contracted
 	  }
 	});
