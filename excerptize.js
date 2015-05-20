@@ -6,6 +6,7 @@
                 tags: 'span',
                 showMoreText: '[...]',
                 showLessText: 'less',
+                afterInitCallback: null,
                 beforeShowMoreCallback: null,
                 afterShowMoreCallback: null,
                 beforeShowLessCallback: null,
@@ -29,8 +30,13 @@
                     excerpt = excerpt.substr(0, Math.min(excerpt.length, excerpt.lastIndexOf(" ")))
                 }
                
-                excerptizedObj.html(getExcerptized(excerpt, fullText, options));            
-                bindControls(excerptizedObj, options);            
+                excerptizedObj.html(getExcerptized(excerpt, fullText, options));   
+                
+                if (typeof options.afterInitCallback == 'function') { 
+                    options.afterInitCallback(excerptizedObj); 
+                }         
+                
+                bindControls(excerptizedObj, options);  
                 
                 // To avoid the flicker when page first loads,
                 // you can make the 'excerptized' element hidden.
@@ -66,7 +72,6 @@
             if (typeof options.afterShowMoreCallback == 'function') { 
                 options.afterShowMoreCallback(excerptizedObj); 
             }
-            
             return false;
         });
         
