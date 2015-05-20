@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Excerptize Demo</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="excerptize.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+    $(document).ready(function(){
+    	$('.excerptize-default').excerptize();
+    	
+        $('.excerptize').excerptize({
+        	  numberOfCharacters:200, 
+        	  cutOffAtWord:true, 
+        	  tags:'div',
+        	  showMoreText:'[... show more]',
+        	  showLessText:'show less',
+              beforeShowMoreCallback:function(obj){
+                  console.log(obj.height())
+              },
+              afterShowMoreCallback:function(obj){
+                  console.log(obj.height())
+              },
+              beforeShowLessCallback:function(obj){
+                  console.log(obj.height())
+              },
+              afterShowLessCallback:function(obj){
+                  console.log(obj.height())
+              }
+        });
+    });
+    </script>
+    
+    <style>
+    .excerptize, .excerptize-default {  width:300px; }
+    </style>
+    
+  </head>
+  <body>
+        <h1>Excerptize for jQuery Demo</h1>
+        
+        <h2>Default</h2>
+        <p class="excerptize-default">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Aenean dignissim urna eu nisl ornare ultrices. Vivamus eu 
+        leo tortor. Nulla pellentesque consectetur condimentum. 
+        Sed eu ex orci. Aenean augue lacus, rhoncus quis accumsan a, 
+        tincidunt a ex. Donec eleifend tellus a ipsum molestie viverra. 
+        Cras sem lorem, bibendum eu lacus at, vestibulum molestie purus. 
+        Duis interdum turpis quis pulvinar placerat. Vestibulum et velit 
+        arcu. In eu pellentesque risus.
+        </p>
+        
+        <h2>With Custom Options</h2>
+		<p class="excerptize">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+		Aenean dignissim urna eu nisl ornare ultrices. Vivamus eu 
+		leo tortor. Nulla pellentesque consectetur condimentum. 
+		Sed eu ex orci. Aenean augue lacus, rhoncus quis accumsan a, 
+		tincidunt a ex. Donec eleifend tellus a ipsum molestie viverra. 
+		Cras sem lorem, bibendum eu lacus at, vestibulum molestie purus. 
+		Duis interdum turpis quis pulvinar placerat. Vestibulum et velit 
+		arcu. In eu pellentesque risus.
+		</p>
+		
+		<p class="excerptize">
+		Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+		Sed fringilla tellus interdum efficitur cursus. Duis ligula ligula, 
+		finibus et dolor sit amet, iaculis maximus purus. Sed tempor felis 
+		sit amet leo tincidunt, eget pulvinar libero suscipit. Fusce id dictum 
+		ante, in consequat velit. Aenean interdum leo arcu, ut volutpat est 
+		ultrices eu. Pellentesque libero lorem, dictum eget convallis eget, 
+		rhoncus nec diam. Mauris tincidunt rhoncus accumsan. Nam eleifend 
+		lacus eget tempus placerat. Etiam sit amet ligula eget arcu rhoncus auctor.
+		</p>
+  </body>
+</html>
