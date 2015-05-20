@@ -32,7 +32,7 @@
 	            // you can make the 'excerptized' element hidden.
 	            // This will ensure excerpt is displayed.
 	            excerptizedObj.show(); 
-            });
+            });            
 	}
     
     // private functions    
@@ -53,11 +53,13 @@
         excerptizedObj.find('.excerptized-show-more').click(function(){
             $(this).hide();
             $(this).next().show();
+            return false;
         });
         
         excerptizedObj.find('.excerptized-show-less').click(function(){
             $(this).parent().hide(); 
             excerptizedObj.find('.excerptized-show-more').show();
+            return false;
         });
     }
 })(jQuery);
