@@ -29,8 +29,20 @@ $(document).ready(function(){
 	  cutOffAtWord:false, 
 	  tags:'div',
 	  showMoreText:'show more',
-	  showLessText:'show less'
-	  });
+	  showLessText:'show less',
+	  beforeShowMoreCallback: function(excepritzedObj) {
+	  	// do something before text is expanded
+	  },
+	  afterShowMoreCallback: function(excepritzedObj) {
+	  	// do something after text is expanded
+	  }
+	  beforeShowLessCallback: function(excepritzedObj) {
+	  	// do something before text is contracted
+	  },
+	  afterShowLessCallback: function(excepritzedObj) {
+	  	// do something after text is contracted
+	  }
+	});
 	
 });
 ````
