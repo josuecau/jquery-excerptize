@@ -10,27 +10,29 @@
             
             options = $.extend(defaults, options);
             
-            var excerptizedObj = $(this),
+            $(this).each(function(){
+                var excerptizedObj = $(this),
                 fullText = excerptizedObj.text(),
                 excerpt = fullText.substr(0, options.numberOfCharacters),
                 excerptized = '';
             
-            // if full text is less than or equal to excerpt, don't bother
-            if(fullText.length<=options.numberOfCharacters) {
-            	return;
-            }
-            
-            if(options.cutOffAtWord) {
-            	excerpt = excerpt.substr(0, Math.min(excerpt.length, excerpt.lastIndexOf(" ")))
-            }
-           
-            excerptizedObj.html(getExcerptized(excerpt, fullText, options));            
-            bindControls(excerptizedObj);            
-            
-            // To avoid the flicker when page first loads,
-            // you can make the 'excerptized' element hidden.
-            // This will ensure excerpt is displayed.
-            excerptizedObj.show(); 
+	            // if full text is less than or equal to excerpt, don't bother
+	            if(fullText.length<=options.numberOfCharacters) {
+	                return;
+	            }
+	            
+	            if(options.cutOffAtWord) {
+	                excerpt = excerpt.substr(0, Math.min(excerpt.length, excerpt.lastIndexOf(" ")))
+	            }
+	           
+	            excerptizedObj.html(getExcerptized(excerpt, fullText, options));            
+	            bindControls(excerptizedObj);            
+	            
+	            // To avoid the flicker when page first loads,
+	            // you can make the 'excerptized' element hidden.
+	            // This will ensure excerpt is displayed.
+	            excerptizedObj.show(); 
+            });
 	}
     
     // private functions    
