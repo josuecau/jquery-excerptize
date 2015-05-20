@@ -29,7 +29,11 @@ $(document).ready(function(){
 	  cutOffAtWord:false, 
 	  tags:'div',
 	  showMoreText:'show more',
-	  showLessText:'show less',
+	  showLessText:'show less',,
+	  afterInitCallback: function(obj){
+	  	// wrap content <i> tags
+		$(obj).html('<i>'+obj.html()+'</i>');
+	  },
 	  beforeShowMoreCallback: function(excerptizedObj) {
 	  	// do something before text is expanded
 	  },
