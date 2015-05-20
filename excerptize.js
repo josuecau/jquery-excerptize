@@ -1,3 +1,8 @@
+/* --------------------------------------------------------------
+    Excerptize jQuery Plugin 
+    by zig@elegrit.com
+-------------------------------------------------------------- */
+
 (function($) {
     $.fn.excerptize = function(options) {
             var defaults = {
